@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgGradiant {
+    background:  linear-gradient(180deg, #FFFFFF 0%, #EEF0F6 100%)
+}
+
+/* .bgClinical {
+    background-image: linear-gradient(55deg, #a1dde9 0, #a3dced 4.55%, #a5dbf0 9.09%, #a9daf3 13.64%, #aed9f5 18.18%, #b3d7f7 22.73%, #b9d6f8 27.27%, #c0d4f8 31.82%, #c6d2f8 36.36%, #cdd0f7 40.91%, #d4cff5 45.45%, #dacdf2 50%, #e0cbef 54.55%, #e6caeb 59.09%, #ebc9e7 63.64%, #efc7e2 68.18%, #f3c7dd 72.73%, #f6c6d8 77.27%, #f8c6d3 81.82%, #fac6ce 86.36%, #fbc6c9 90.91%, #fbc6c4 95.45%, #fac7bf 100%);
+} */
+
+.bgClinical {
+    background-image: url('./assets/images/bgClinical.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bgTransparent {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px);
+}
+
+input:hover {
+    border: 1px solid #959799;
+}
+
+.button:disabled {
+    opacity: 0.5;
+}
+
