@@ -84,7 +84,6 @@ export default {
   methods: {
     validationButton() {
       const regexEmail = /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/;
-      console.log(regexEmail);
       if (!regexEmail.test(this.emailValue)) {
         return true;
       }
@@ -121,6 +120,7 @@ export default {
           window.location.href = "http://localhost:8080/ClinicalHistories";
         }
       } catch (error) {
+        console.log(error);
         this.loading = false;
         if (error && error.response && error.response.data) {
           this.error.messageError = error.response.data.message;

@@ -41,7 +41,6 @@ import ArrowDown from "@/assets/icons/arrowdown.svg";
 import Views from "@/assets/icons/views.svg";
 import PatientItem from "@/components/PatientItem.vue";
 import { patients } from "@/api.js";
-console.log(patients);
 
 export default {
   name: "PatientsList",
