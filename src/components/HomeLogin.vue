@@ -114,19 +114,18 @@ export default {
           data,
         });
         this.loading = false;
+        console.log(res);
         localStorage.setItem("token", res.data.access_token);
 
         if (res.status === 200) {
           window.location.href = "http://localhost:8080/ClinicalHistories";
         }
       } catch (error) {
-        console.log(error);
         this.loading = false;
-        if (error && error.response && error.response.data) {
-          this.error.messageError = error.response.data.message;
+        if (error.response.data) {
+          this.messageError = error.response.data.message;
           return;
         }
-
         this.messageError = error.message;
       }
     },
